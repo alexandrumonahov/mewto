@@ -72,3 +72,5 @@ _Option 2) In RStudio:_
 Go to the Packages tab in the bottom-right pane and click on "Install". In the pop-up window that appears, click on "Browse" and choose the package mewto.zip that you have just downloaded. Click on "Install".
 
 Once the package is stalled, you can run it using the: **library(mewto)** command.
+
+Alexandru Monahov, 2021
