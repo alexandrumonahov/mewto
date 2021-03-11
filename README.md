@@ -36,3 +36,39 @@ In the calculation of the optimal threshold, a weighted version of Youden's J-st
 **2 * (w * sensitivity + (1 - w) * specificity)**, where "w" is the "weight" parameter.
 
 Youden's J-statistic has been modified by adding the weighting parameter "w". To keep the values of the modified version of the evaluation criterion consistent with the one calculated by the original version of Youden, a scaling factor of 2 has been used. This particular statistic has been chosen since it is well-suited for weighting, and it is also the default criterion used in the R package pROC.
+
+## Download and installation
+
+#### Online, from Github:
+
+You can download **mewto** directly from Github. To do so, you need to have the **devtools** pachage installed and loaded. Once you are in **R**, run the following commands:
+
+> install.packages("devtools")
+> 
+> library("devtools")
+> 
+> install_github("alexandrumonahov/mewto")
+
+You may face downloading errors from Github if you are behind a forewall or there are https download restrictions. To avoid this, you can try running the following commands:
+
+> options(download.file.method = "libcurl")
+> 
+> options(download.file.method = "wininet")
+
+#### Offline, by manually downloading and installing the package files:
+
+Alternatively, if you cannot download the file through Github, you may also download the binary package file from the link below:
+
+https://github.com/alexandrumonahov/zip/blob/main/mewto_1.0.zip
+
+Place the downloaded file into the working directory of R. The do one of the following:
+
+_Option 1) Run the following command:_
+
+> install.packages('mewto_1.0.zip', repos = NULL, type = "win.binary")
+
+_Option 2) In RStudio:_
+
+Go to the Packages tab in the bottom-right pane and click on "Install". In the pop-up window that appears, click on "Browse" and choose the package mewto.zip that you have just downloaded. Click on "Install".
+
+Once the package is stalled, you can run it using the: **library(mewto)** command.
