@@ -1,0 +1,21 @@
+Package: mewto
+Title: Model Evaluation with Weighted Threshold Optimization
+Version: 1.0.0.0000
+Authors@R: 
+    person(given = "Alexandru",
+           family = "Monahov",
+           role = c("aut", "cre"),
+           email = "alexandrudezv@gmail.com")
+Description: The package provides a function to calculate a weighted optimal
+  threshold for model evaluation, as well as a Shiny interface to experiment
+  with threshold configurations and visualize performance metrics.
+Depends: shiny, tidyverse, caret, pROC, plotrix
+License: Creative Commons Attribution ShareAlike International License
+        version 4.0 (CC-BY-SA-4.0)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Author: Alexandru Monahov [aut, cre]
+Maintainer: Alexandru Monahov <alexandrudezv@gmail.com>
+Built: R 4.0.4; ; 2021-03-11 15:04:09 UTC; windows
