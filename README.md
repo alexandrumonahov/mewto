@@ -73,4 +73,6 @@ Go to the Packages tab in the bottom-right pane and click on "Install". In the p
 
 Once the package is stalled, you can run it using the: **library(mewto)** command.
 
+## Author details
+
 Alexandru Monahov, 2021
