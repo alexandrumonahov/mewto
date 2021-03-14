@@ -68,7 +68,7 @@ You may face downloading errors from Github if you are behind a forewall or ther
 
 Alternatively, if you cannot download the file through Github, you may also download the binary package file from the link below:
 
-https://github.com/alexandrumonahov/zip/blob/main/mewto_1.0.zip
+https://github.com/alexandrumonahov/zip/blob/main/mewto.zip
 
 Place the downloaded file into the working directory of R. The do one of the following:
 
