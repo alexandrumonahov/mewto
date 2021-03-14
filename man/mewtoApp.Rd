@@ -16,7 +16,7 @@ probabilities of realization of the positive category.}
 \description{
 This function launches a Shiny application where the user can interactively
 manipulate the threshold used in binary classification and view the
-associated metrics, confusion matrix and ROC curve. The app also allows
+associated metrics, confusion matrix, ROC and PR curves. The app also allows
 for optimal threshold calculation according to a weighted version of
 Youden's J-statistic.
 }
@@ -24,11 +24,11 @@ Youden's J-statistic.
 In the calculation of the optimal threshold, a weighted version of
 Youden's J-statistic (Youden, 1950) is employed. The optimal cut-off is the
 threshold that maximizes the distance to the identity (diagonal) line. The
-function maximizes the metric 2 * (w * sensitivity + (1 - w) * specificity),
+function maximizes the metric (w * sensitivity + (1 - w) * specificity),
 where w is the "weight" parameter chosen through the second slider. After
 setting the desired value on the optimal threshold slider, the user must
 press the button "Set" to update the threshold slider above with the optimal
-value.
+value. Metrics will automatically be recalculated based on the user's selection.
 }
 \examples{
 mewtoApp(actuals, probabilities)

@@ -13,8 +13,8 @@ mewtoThresh(actuals, probabilities, weight = 0.5)
 \item{probabilities}{Data of numeric type which should represent the
 probabilities of realization of the positive category.}
 
-\item{weight}{The importance attributed to sensitivity, or formulated
-differently, to the maximization of the true positives rate.}
+\item{weight}{A numeric value corresponding to the importance attributed to sensitivity, or formulated
+differently, to the maximization of the true positives rate. This value should be in the interval \link{0 ; 1}.}
 }
 \description{
 This function calculates the optimal threshold according to a weighted
@@ -24,8 +24,9 @@ version of Youden's J-statistic.
 In the calculation of the optimal threshold, a weighted version of
 Youden's J-statistic (Youden, 1950) is employed. The optimal cut-off is the
 threshold that maximizes the distance to the identity (diagonal) line. The
-function maximizes the metric 2 * (w * sensitivity + (1 - w) * specificity),
-where w is the "weight" parameter.
+function maximizes the metric (w * sensitivity + (1 - w) * specificity),
+where w is the "weight" parameter. Metrics will automatically be recalculated
+based on the user's selection.
 }
 \examples{
 mewtoThresh(actuals, probabilities, weight = 0.5) # Original Youden's J-statistic.
