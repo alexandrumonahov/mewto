@@ -82,6 +82,10 @@ Go to the Packages tab in the bottom-right pane and click on "Install". In the p
 
 Once the package is stalled, you can run it using the: **library(mewto)** command.
 
+## Special thanks!
+
+I would like to give special thanks to Prof. Stefan Bender, Dr. Jens Mehrhoff, Gabriela Alves Werb and the Bundesbank ICBD team for having inspired the creation of this package.
+
 ## Version history
 
 ### v1.0.0
