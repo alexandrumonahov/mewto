@@ -3,6 +3,8 @@
 
 ### mewto is an R package that allows users to experiment with different thresholds for classification of prediction results in the case of binary classification problems and to interactively visualize model evaluation metrics, confusion matrices, the ROC and PR curves. It can also calculate the optimal threshold based on a weighted evaluation criterion and displays related performance metrics.
 
+### [Paper (SSRN)](https://ssrn.com/abstract=3805911)
+
 ### v1.1.0
 
 ## What's new?
