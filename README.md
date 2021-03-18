@@ -38,6 +38,29 @@ _probabilities_ - Data of numeric type which should represent the probabilities 
 
 _weight_ - The importance attributed to sensitivity, or formulated differently, to the maximization of the true positives rate.
 
+## Example
+
+This example generates 100000 observations of actual data (labelled "no", "yes"), as well as predicted values (ranging between 0 and 1), and stores tham in a dataframe called "df". The user can then call the functions included in the mewto package to perform exploratory analysis or obtain the optimum threshold value according to the weighted Youden J-statistic.
+
+```R
+# Generate dataset
+set.seed(123)
+nobs = 100000 # Select the number of observations to be generated
+predicted <- runif(nobs, 0, 1) # Probabilities representing the predicted values
+thresh <- runif(nobs, 0.2, 0.8) # Intermediary step to generate actuals 
+df <- data.frame(predicted, thresh) # "predicted" and "thresh" combined in "df"
+df$actuals <- c("no", "yes")[(df$predicted >= df$thresh) + 1] # Actual data
+
+# Call the mewto library
+library(mewto)
+
+# Run mewtoApp to launch the visual interface and experiment
+mewtoApp(df$actuals, df$predicted)
+
+# Run mewtoThresh with a weight of 0.5 to obtain the optimal threshold according to Youden's original J-statistic
+mewtoThresh(df$actuals, df$predicted, weight=0.5)
+```
+
 ## Technical details
 
 In the calculation of the optimal threshold, a weighted version of Youden's J-statistic (Youden, 1950) is employed. The optimal cut-off is the threshold that maximizes the distance to the identity (diagonal) line. The function maximizes the metric:
